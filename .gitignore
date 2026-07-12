@@ -1,0 +1,17 @@
+# Dependencies are installed per deployment environment.
+node_modules/
+
+# Local Vite cache and environment files.
+.vite/
+.env
+.env.local
+.env.*.local
+
+# Vercel local metadata.
+.vercel/
+
+# Logs.
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
