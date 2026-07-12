@@ -1,0 +1,17 @@
+import { chromium } from 'playwright-core';
+import fs from 'node:fs';
+const out=new URL('../video-assets/',import.meta.url);fs.mkdirSync(out,{recursive:true});
+const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+await page.goto('http://localhost:4173',{waitUntil:'networkidle'});
+const shot=async(name,{fullPage=false}={})=>{await page.waitForTimeout(500);await page.screenshot({path:new URL(`${name}.png`,out).pathname.slice(1),fullPage});};
+await shot('01-dashboard');
+await page.evaluate(()=>window.scrollTo({top:document.body.scrollHeight,behavior:'instant'}));await shot('02-modele');
+await page.evaluate(()=>window.scrollTo(0,0));await page.getByRole('button',{name:/Stock & Matching/i}).click();await shot('03-stock');
+const confirm=page.getByRole('button',{name:/Confirmer/i}).first();if(await confirm.count())await confirm.click();await shot('04-match');
+await page.getByRole('button',{name:/Prévisions IA/i}).click();await shot('05-forecast');
+await page.getByRole('button',{name:/Partenaires/i}).click();await shot('06-partenaires');
+await page.getByText('Socofrais',{exact:true}).first().click();await shot('07-socofrais');
+await page.getByRole('button',{name:/Espace Fournisseurs/i}).first().click();await shot('08-client');
+await page.getByRole('button',{name:/Espace Administrateur/i}).first().click();await page.getByRole('button',{name:/Impact/i}).click();await shot('09-impact');
+await browser.close();console.log('9 captures créées');

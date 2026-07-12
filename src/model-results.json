@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-12T12:03:24.521Z",
+  "generatedAt": "2026-07-12T14:38:41.449Z",
   "source": {
     "file": "waste2cash_dataset.csv",
     "rows": 15000,
@@ -637,5 +637,346 @@
       "status": "À confirmer",
       "rotation": "0–18 h"
     }
-  ]
+  ],
+  "marketplace": {
+    "precision": 87.6,
+    "mae": 12.4,
+    "avgDiscount": 55.4,
+    "ca": 116,
+    "delai": 61.2,
+    "conversion": 75.5,
+    "samples": 3690,
+    "bucketLabels": [
+      "≤ 1 jour",
+      "2–3 jours",
+      "4–7 jours",
+      "8 jours et +"
+    ],
+    "discountModel": {
+      "Boulangerie": [
+        54,
+        54.6,
+        55.1,
+        55.1
+      ],
+      "Surgelés": [
+        54.1,
+        55.5,
+        55.9,
+        55.5
+      ],
+      "Produits Laitiers": [
+        56,
+        54.5,
+        54.6,
+        55.1
+      ],
+      "Fruits & Légumes": [
+        55.3,
+        55.4,
+        55.1,
+        55.1
+      ],
+      "Viande & Poisson": [
+        54.9,
+        54.8,
+        55.1,
+        55.1
+      ],
+      "Épicerie Sèche": [
+        53.4,
+        54.3,
+        57.2,
+        55.1
+      ]
+    },
+    "salesByCategory": [
+      {
+        "name": "Viande & Poisson",
+        "ca": 31.2
+      },
+      {
+        "name": "Surgelés",
+        "ca": 21
+      },
+      {
+        "name": "Produits Laitiers",
+        "ca": 18.5
+      },
+      {
+        "name": "Épicerie Sèche",
+        "ca": 18.5
+      },
+      {
+        "name": "Fruits & Légumes",
+        "ca": 16.6
+      },
+      {
+        "name": "Boulangerie",
+        "ca": 10.1
+      }
+    ],
+    "caByStore": [
+      {
+        "name": "Socofrais",
+        "ca": 18.9
+      },
+      {
+        "name": "Sangel",
+        "ca": 20.9
+      },
+      {
+        "name": "Playce",
+        "ca": 20.4
+      },
+      {
+        "name": "Cap Nord",
+        "ca": 19.4
+      },
+      {
+        "name": "Cosmos",
+        "ca": 19.6
+      },
+      {
+        "name": "Cap Sud",
+        "ca": 16.9
+      }
+    ],
+    "cities": [
+      {
+        "name": "Abidjan",
+        "volume": 67.1,
+        "sold": 50.1,
+        "ca": 50.1,
+        "km": 23.5,
+        "lots": 2115
+      },
+      {
+        "name": "Bouaké",
+        "volume": 27.9,
+        "sold": 21.3,
+        "ca": 22.1,
+        "km": 23.6,
+        "lots": 882
+      },
+      {
+        "name": "Yamoussoukro",
+        "volume": 22.2,
+        "sold": 17.1,
+        "ca": 16.9,
+        "km": 22.8,
+        "lots": 734
+      },
+      {
+        "name": "San-Pédro",
+        "volume": 19.9,
+        "sold": 15.1,
+        "ca": 14.4,
+        "km": 23.3,
+        "lots": 630
+      },
+      {
+        "name": "Korhogo",
+        "volume": 16.4,
+        "sold": 12.4,
+        "ca": 12.5,
+        "km": 23,
+        "lots": 522
+      }
+    ],
+    "products": [
+      {
+        "id": "MKT-1100",
+        "product": "Tomates & bananes plantain",
+        "sub": "Légumes racines",
+        "cat": "Fruits & Légumes",
+        "q": 55,
+        "days": 1,
+        "store": "Cosmos",
+        "commune": "Yopougon",
+        "region": "Abidjan",
+        "prixInitial": 1520,
+        "decote": 55,
+        "prixIA": 680,
+        "prob": 62,
+        "score": 60
+      },
+      {
+        "id": "MKT-1101",
+        "product": "Tomates & bananes plantain",
+        "sub": "Légumes feuilles",
+        "cat": "Fruits & Légumes",
+        "q": 12,
+        "days": 1,
+        "store": "Sangel",
+        "commune": "Marcory",
+        "region": "San-Pédro",
+        "prixInitial": 1420,
+        "decote": 55,
+        "prixIA": 630,
+        "prob": 62,
+        "score": 60
+      },
+      {
+        "id": "MKT-1102",
+        "product": "Poulet & poisson frais",
+        "sub": "Charcuterie",
+        "cat": "Viande & Poisson",
+        "q": 40,
+        "days": 1,
+        "store": "Socofrais",
+        "commune": "Cocody",
+        "region": "Bouaké",
+        "prixInitial": 4560,
+        "decote": 55,
+        "prixIA": 2060,
+        "prob": 59,
+        "score": 59
+      },
+      {
+        "id": "MKT-1103",
+        "product": "Poulet & poisson frais",
+        "sub": "Boeuf",
+        "cat": "Viande & Poisson",
+        "q": 23,
+        "days": 1,
+        "store": "Playce",
+        "commune": "Plateau",
+        "region": "Bouaké",
+        "prixInitial": 3890,
+        "decote": 55,
+        "prixIA": 1750,
+        "prob": 59,
+        "score": 59
+      },
+      {
+        "id": "MKT-1104",
+        "product": "Tomates & bananes plantain",
+        "sub": "Légumes racines",
+        "cat": "Fruits & Légumes",
+        "q": 12,
+        "days": 1,
+        "store": "Socofrais",
+        "commune": "Cocody",
+        "region": "Bouaké",
+        "prixInitial": 1400,
+        "decote": 55,
+        "prixIA": 630,
+        "prob": 62,
+        "score": 60
+      },
+      {
+        "id": "MKT-1105",
+        "product": "Pains & viennoiseries",
+        "sub": "Pâtisserie",
+        "cat": "Boulangerie",
+        "q": 23,
+        "days": 1,
+        "store": "Socofrais",
+        "commune": "Cocody",
+        "region": "Bouaké",
+        "prixInitial": 1950,
+        "decote": 54,
+        "prixIA": 900,
+        "prob": 62,
+        "score": 60
+      },
+      {
+        "id": "MKT-1106",
+        "product": "Pains & viennoiseries",
+        "sub": "Pain",
+        "cat": "Boulangerie",
+        "q": 26,
+        "days": 1,
+        "store": "Cap Nord",
+        "commune": "Angré",
+        "region": "Yamoussoukro",
+        "prixInitial": 1530,
+        "decote": 54,
+        "prixIA": 700,
+        "prob": 62,
+        "score": 60
+      },
+      {
+        "id": "MKT-1107",
+        "product": "Yaourts & lait frais",
+        "sub": "Fromage",
+        "cat": "Produits Laitiers",
+        "q": 22,
+        "days": 1,
+        "store": "Playce",
+        "commune": "Plateau",
+        "region": "Korhogo",
+        "prixInitial": 2310,
+        "decote": 56,
+        "prixIA": 1020,
+        "prob": 58,
+        "score": 59
+      },
+      {
+        "id": "MKT-1108",
+        "product": "Yaourts & lait frais",
+        "sub": "Beurre",
+        "cat": "Produits Laitiers",
+        "q": 32,
+        "days": 1,
+        "store": "Cap Nord",
+        "commune": "Angré",
+        "region": "Abidjan",
+        "prixInitial": 1840,
+        "decote": 56,
+        "prixIA": 810,
+        "prob": 58,
+        "score": 59
+      },
+      {
+        "id": "MKT-1109",
+        "product": "Pains & viennoiseries",
+        "sub": "Viennoiserie",
+        "cat": "Boulangerie",
+        "q": 8,
+        "days": 1,
+        "store": "Playce",
+        "commune": "Plateau",
+        "region": "Abidjan",
+        "prixInitial": 1400,
+        "decote": 54,
+        "prixIA": 640,
+        "prob": 62,
+        "score": 60
+      },
+      {
+        "id": "MKT-1110",
+        "product": "Pains & viennoiseries",
+        "sub": "Viennoiserie",
+        "cat": "Boulangerie",
+        "q": 27,
+        "days": 1,
+        "store": "Cap Sud",
+        "commune": "Marcory",
+        "region": "Korhogo",
+        "prixInitial": 1820,
+        "decote": 54,
+        "prixIA": 840,
+        "prob": 62,
+        "score": 60
+      },
+      {
+        "id": "MKT-1111",
+        "product": "Poulet & poisson frais",
+        "sub": "Boeuf",
+        "cat": "Viande & Poisson",
+        "q": 44,
+        "days": 1,
+        "store": "Sangel",
+        "commune": "Marcory",
+        "region": "Bouaké",
+        "prixInitial": 5400,
+        "decote": 55,
+        "prixIA": 2440,
+        "prob": 59,
+        "score": 59
+      }
+    ]
+  }
 }
