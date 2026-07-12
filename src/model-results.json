@@ -1,0 +1,641 @@
+{
+  "generatedAt": "2026-07-12T12:03:24.521Z",
+  "source": {
+    "file": "waste2cash_dataset.csv",
+    "rows": 15000,
+    "period": "2024-01-01 → 2025-06-29",
+    "method": "Agrégation historique, saisonnalité mensuelle et score 60% urgence + 40% probabilité"
+  },
+  "dashboard": {
+    "stock": 25.4,
+    "routeRate": 75.5,
+    "matchHours": 61.2,
+    "co2": 266.7,
+    "monthly": [
+      {
+        "m": "Jan",
+        "collecte": 27.4,
+        "route": 20.1
+      },
+      {
+        "m": "Fév",
+        "collecte": 22.8,
+        "route": 16.9
+      },
+      {
+        "m": "Mar",
+        "collecte": 26.1,
+        "route": 20.6
+      },
+      {
+        "m": "Avr",
+        "collecte": 26,
+        "route": 19.4
+      },
+      {
+        "m": "Mai",
+        "collecte": 25.9,
+        "route": 19.7
+      },
+      {
+        "m": "Juin",
+        "collecte": 25.4,
+        "route": 19.3
+      }
+    ],
+    "categoryTotals": [
+      {
+        "name": "Fruits & Légumes",
+        "v": 43.2
+      },
+      {
+        "name": "Produits Laitiers",
+        "v": 25.6
+      },
+      {
+        "name": "Épicerie Sèche",
+        "v": 23.9
+      },
+      {
+        "name": "Viande & Poisson",
+        "v": 22.1
+      },
+      {
+        "name": "Boulangerie",
+        "v": 21.9
+      },
+      {
+        "name": "Surgelés",
+        "v": 16.9
+      }
+    ],
+    "wasteAvg": [
+      {
+        "name": "Fruits & Légumes",
+        "avg": 2.09
+      },
+      {
+        "name": "Boulangerie",
+        "avg": 1.33
+      },
+      {
+        "name": "Viande & Poisson",
+        "avg": 1.25
+      },
+      {
+        "name": "Produits Laitiers",
+        "avg": 0.93
+      },
+      {
+        "name": "Épicerie Sèche",
+        "avg": 0.36
+      },
+      {
+        "name": "Surgelés",
+        "avg": 0.3
+      }
+    ]
+  },
+  "partners": [
+    {
+      "name": "Socofrais",
+      "city": "Cocody",
+      "initials": "SO",
+      "tag": "Distribution de produits frais",
+      "used": 41,
+      "demand": "Fruits & Légumes & Viande & Poisson",
+      "km": 23,
+      "score": 3.1,
+      "volume": 23.1,
+      "route": 77.4,
+      "avg": [
+        4,
+        2.69,
+        3.57,
+        4.15,
+        4.7,
+        3.93
+      ],
+      "byCategory": [
+        {
+          "name": "Fruits & Légumes",
+          "kg": 6589
+        },
+        {
+          "name": "Viande & Poisson",
+          "kg": 3955
+        },
+        {
+          "name": "Boulangerie",
+          "kg": 3651
+        },
+        {
+          "name": "Produits Laitiers",
+          "kg": 3367
+        },
+        {
+          "name": "Épicerie Sèche",
+          "kg": 3110
+        },
+        {
+          "name": "Surgelés",
+          "kg": 2380
+        }
+      ]
+    },
+    {
+      "name": "Sangel",
+      "city": "Marcory",
+      "initials": "SA",
+      "tag": "Supermarché & alimentation",
+      "used": 41,
+      "demand": "Fruits & Légumes & Produits Laitiers",
+      "km": 23.7,
+      "score": 3.1,
+      "volume": 27.9,
+      "route": 76.2,
+      "avg": [
+        4.36,
+        3.59,
+        4.89,
+        4.56,
+        5.11,
+        5.39
+      ],
+      "byCategory": [
+        {
+          "name": "Fruits & Légumes",
+          "kg": 7955
+        },
+        {
+          "name": "Produits Laitiers",
+          "kg": 4975
+        },
+        {
+          "name": "Épicerie Sèche",
+          "kg": 4732
+        },
+        {
+          "name": "Viande & Poisson",
+          "kg": 4091
+        },
+        {
+          "name": "Boulangerie",
+          "kg": 3562
+        },
+        {
+          "name": "Surgelés",
+          "kg": 2582
+        }
+      ]
+    },
+    {
+      "name": "Playce",
+      "city": "Plateau",
+      "initials": "PL",
+      "tag": "Centre commercial",
+      "used": 41,
+      "demand": "Fruits & Légumes & Épicerie Sèche",
+      "km": 23.2,
+      "score": 3.1,
+      "volume": 26.7,
+      "route": 73.9,
+      "avg": [
+        5.59,
+        4.19,
+        4.54,
+        4.47,
+        3.63,
+        4.25
+      ],
+      "byCategory": [
+        {
+          "name": "Fruits & Légumes",
+          "kg": 7010
+        },
+        {
+          "name": "Épicerie Sèche",
+          "kg": 4575
+        },
+        {
+          "name": "Produits Laitiers",
+          "kg": 4368
+        },
+        {
+          "name": "Viande & Poisson",
+          "kg": 3945
+        },
+        {
+          "name": "Boulangerie",
+          "kg": 3883
+        },
+        {
+          "name": "Surgelés",
+          "kg": 2885
+        }
+      ]
+    },
+    {
+      "name": "Cap Nord",
+      "city": "Angré",
+      "initials": "CN",
+      "tag": "Centre commercial",
+      "used": 41,
+      "demand": "Fruits & Légumes & Produits Laitiers",
+      "km": 23.6,
+      "score": 3,
+      "volume": 26.6,
+      "route": 73.1,
+      "avg": [
+        4.6,
+        4.15,
+        4.36,
+        4.57,
+        4.87,
+        4.05
+      ],
+      "byCategory": [
+        {
+          "name": "Fruits & Légumes",
+          "kg": 6809
+        },
+        {
+          "name": "Produits Laitiers",
+          "kg": 5136
+        },
+        {
+          "name": "Boulangerie",
+          "kg": 4104
+        },
+        {
+          "name": "Viande & Poisson",
+          "kg": 3833
+        },
+        {
+          "name": "Épicerie Sèche",
+          "kg": 3632
+        },
+        {
+          "name": "Surgelés",
+          "kg": 3085
+        }
+      ]
+    },
+    {
+      "name": "Cosmos",
+      "city": "Yopougon",
+      "initials": "CO",
+      "tag": "Centre commercial",
+      "used": 41,
+      "demand": "Fruits & Légumes & Épicerie Sèche",
+      "km": 23,
+      "score": 3.1,
+      "volume": 26.8,
+      "route": 76.3,
+      "avg": [
+        4.86,
+        4.58,
+        4.59,
+        4.52,
+        4.37,
+        3.88
+      ],
+      "byCategory": [
+        {
+          "name": "Fruits & Légumes",
+          "kg": 7602
+        },
+        {
+          "name": "Épicerie Sèche",
+          "kg": 4951
+        },
+        {
+          "name": "Produits Laitiers",
+          "kg": 4550
+        },
+        {
+          "name": "Boulangerie",
+          "kg": 3334
+        },
+        {
+          "name": "Surgelés",
+          "kg": 3254
+        },
+        {
+          "name": "Viande & Poisson",
+          "kg": 3106
+        }
+      ]
+    },
+    {
+      "name": "Cap Sud",
+      "city": "Marcory",
+      "initials": "CS",
+      "tag": "Centre commercial",
+      "used": 41,
+      "demand": "Fruits & Légumes & Boulangerie",
+      "km": 23.6,
+      "score": 3.1,
+      "volume": 22.5,
+      "route": 77,
+      "avg": [
+        4.03,
+        3.57,
+        4.13,
+        3.7,
+        3.22,
+        3.88
+      ],
+      "byCategory": [
+        {
+          "name": "Fruits & Légumes",
+          "kg": 7231
+        },
+        {
+          "name": "Boulangerie",
+          "kg": 3398
+        },
+        {
+          "name": "Produits Laitiers",
+          "kg": 3195
+        },
+        {
+          "name": "Viande & Poisson",
+          "kg": 3134
+        },
+        {
+          "name": "Épicerie Sèche",
+          "kg": 2853
+        },
+        {
+          "name": "Surgelés",
+          "kg": 2703
+        }
+      ]
+    }
+  ],
+  "forecast": [
+    {
+      "m": "Juil",
+      "Boulangerie": 3.7,
+      "Surgelés": 4.3,
+      "Produits Laitiers": 4.6,
+      "Fruits & Légumes": 6.7,
+      "Viande & Poisson": 4.1,
+      "Épicerie Sèche": 3.6
+    },
+    {
+      "m": "Août",
+      "Boulangerie": 3.7,
+      "Surgelés": 3,
+      "Produits Laitiers": 3.7,
+      "Fruits & Légumes": 8.8,
+      "Viande & Poisson": 4,
+      "Épicerie Sèche": 4.8
+    },
+    {
+      "m": "Sept",
+      "Boulangerie": 4.8,
+      "Surgelés": 3.1,
+      "Produits Laitiers": 4.5,
+      "Fruits & Légumes": 9.1,
+      "Viande & Poisson": 3.9,
+      "Épicerie Sèche": 4.2
+    },
+    {
+      "m": "Oct",
+      "Boulangerie": 3.3,
+      "Surgelés": 3.9,
+      "Produits Laitiers": 5.1,
+      "Fruits & Légumes": 8.6,
+      "Viande & Poisson": 4.5,
+      "Épicerie Sèche": 4.2
+    },
+    {
+      "m": "Nov",
+      "Boulangerie": 3.5,
+      "Surgelés": 3.1,
+      "Produits Laitiers": 4.8,
+      "Fruits & Légumes": 8.6,
+      "Viande & Poisson": 4.1,
+      "Épicerie Sèche": 4.1
+    },
+    {
+      "m": "Déc",
+      "Boulangerie": 4.6,
+      "Surgelés": 3,
+      "Produits Laitiers": 3.9,
+      "Fruits & Légumes": 7.5,
+      "Viande & Poisson": 4.8,
+      "Épicerie Sèche": 5.8
+    }
+  ],
+  "rotation": [
+    {
+      "category": "Boulangerie",
+      "hours": 11.9,
+      "window": "0–18 h",
+      "samples": 1339
+    },
+    {
+      "category": "Surgelés",
+      "hours": 125.4,
+      "window": "30–48 h",
+      "samples": 1581
+    },
+    {
+      "category": "Produits Laitiers",
+      "hours": 20.7,
+      "window": "18–30 h",
+      "samples": 1881
+    },
+    {
+      "category": "Fruits & Légumes",
+      "hours": 15.6,
+      "window": "0–18 h",
+      "samples": 3047
+    },
+    {
+      "category": "Viande & Poisson",
+      "hours": 13.5,
+      "window": "0–18 h",
+      "samples": 1412
+    },
+    {
+      "category": "Épicerie Sèche",
+      "hours": 180,
+      "window": "30–48 h",
+      "samples": 2075
+    }
+  ],
+  "lots": [
+    {
+      "id": "W2C-2900",
+      "product": "Tomates & bananes plantain",
+      "cat": "Fruits & Légumes",
+      "q": 44.4,
+      "days": 1,
+      "city": "Marcory",
+      "score": 65,
+      "partner": "Sangel",
+      "match": 93,
+      "km": 35.4,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2899",
+      "product": "Pains & viennoiseries",
+      "cat": "Boulangerie",
+      "q": 67.1,
+      "days": 1,
+      "city": "Angré",
+      "score": 51,
+      "partner": "Cap Nord",
+      "match": 88,
+      "km": 11.4,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2898",
+      "product": "Tomates & bananes plantain",
+      "cat": "Fruits & Légumes",
+      "q": 42.4,
+      "days": 1,
+      "city": "Angré",
+      "score": 65,
+      "partner": "Cap Nord",
+      "match": 93,
+      "km": 38.8,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2897",
+      "product": "Poulet & poisson frais",
+      "cat": "Viande & Poisson",
+      "q": 35,
+      "days": 1,
+      "city": "Marcory",
+      "score": 65,
+      "partner": "Cap Sud",
+      "match": 93,
+      "km": 37.2,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2896",
+      "product": "Tomates & bananes plantain",
+      "cat": "Fruits & Légumes",
+      "q": 21.1,
+      "days": 1,
+      "city": "Angré",
+      "score": 51,
+      "partner": "Cap Nord",
+      "match": 88,
+      "km": 38.6,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2895",
+      "product": "Poulet & poisson frais",
+      "cat": "Viande & Poisson",
+      "q": 20.6,
+      "days": 1,
+      "city": "Marcory",
+      "score": 51,
+      "partner": "Sangel",
+      "match": 88,
+      "km": 44.8,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2894",
+      "product": "Pains & viennoiseries",
+      "cat": "Boulangerie",
+      "q": 3.9,
+      "days": 1,
+      "city": "Cocody",
+      "score": 51,
+      "partner": "Socofrais",
+      "match": 88,
+      "km": 29.7,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2893",
+      "product": "Tomates & bananes plantain",
+      "cat": "Fruits & Légumes",
+      "q": 10.9,
+      "days": 1,
+      "city": "Plateau",
+      "score": 51,
+      "partner": "Playce",
+      "match": 88,
+      "km": 5,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2892",
+      "product": "Yaourts & lait frais",
+      "cat": "Produits Laitiers",
+      "q": 25.6,
+      "days": 1,
+      "city": "Yopougon",
+      "score": 65,
+      "partner": "Cosmos",
+      "match": 93,
+      "km": 21.1,
+      "status": "À confirmer",
+      "rotation": "18–30 h"
+    },
+    {
+      "id": "W2C-2891",
+      "product": "Tomates & bananes plantain",
+      "cat": "Fruits & Légumes",
+      "q": 39.1,
+      "days": 1,
+      "city": "Angré",
+      "score": 65,
+      "partner": "Cap Nord",
+      "match": 93,
+      "km": 14.9,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2890",
+      "product": "Tomates & bananes plantain",
+      "cat": "Fruits & Légumes",
+      "q": 37.6,
+      "days": 1,
+      "city": "Marcory",
+      "score": 51,
+      "partner": "Sangel",
+      "match": 88,
+      "km": 32.2,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    },
+    {
+      "id": "W2C-2889",
+      "product": "Poulet & poisson frais",
+      "cat": "Viande & Poisson",
+      "q": 17.7,
+      "days": 1,
+      "city": "Marcory",
+      "score": 51,
+      "partner": "Cap Sud",
+      "match": 88,
+      "km": 22.1,
+      "status": "À confirmer",
+      "rotation": "0–18 h"
+    }
+  ]
+}
