@@ -1,0 +1,23 @@
+import { chromium } from 'playwright-core';
+import fs from 'node:fs';
+const out=new URL('../video-jury/',import.meta.url);fs.mkdirSync(out,{recursive:true});
+const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe'});
+const page=await browser.newPage({viewport:{width:1440,height:900},deviceScaleFactor:1});
+const pathOf=n=>new URL(`${n}.png`,out).pathname.slice(1);
+const shot=async n=>{await page.waitForTimeout(650);await page.screenshot({path:pathOf(n)})};
+const login=async label=>{await page.goto('http://127.0.0.1:4173/#/login',{waitUntil:'networkidle'});await page.evaluate(()=>localStorage.removeItem('w2c-session-v1'));await page.reload({waitUntil:'networkidle'});await page.getByText(label,{exact:true}).click();await page.getByRole('button',{name:/Se connecter/i}).click();await page.waitForTimeout(650)};
+const card=async(n,kicker,title,text,accent='#1f5fbf')=>{await page.setContent(`<!doctype html><html><style>*{box-sizing:border-box}body{margin:0;width:1440px;height:900px;background:#f5f7fa;font-family:Arial,sans-serif;color:#17243a;display:grid;place-items:center}.wrap{width:1180px;height:650px;background:white;border-radius:28px;box-shadow:0 20px 70px #17365f18;padding:80px;position:relative;overflow:hidden}.wrap:after{content:'';position:absolute;width:420px;height:420px;border-radius:50%;background:${accent}10;right:-100px;bottom:-140px}.logo{display:flex;align-items:center;gap:14px;font-size:26px;font-weight:800}.leaf{width:48px;height:48px;background:#1f5fbf;color:white;border-radius:13px;display:grid;place-items:center;font-size:25px}.two{color:#2e7d32}.kick{margin-top:100px;color:${accent};font-weight:800;font-size:14px;letter-spacing:2px;text-transform:uppercase}.line{width:64px;height:6px;border-radius:6px;background:${accent};margin:22px 0}h1{font-size:54px;line-height:1.12;margin:0;max-width:900px;letter-spacing:-2px}p{font-size:24px;line-height:1.55;color:#617087;max-width:880px;margin-top:24px}.num{position:absolute;right:75px;top:68px;font-size:72px;font-weight:800;color:${accent}12}</style><body><div class="wrap"><div class="logo"><span class="leaf">♻</span>Waste<span class="two">2</span>Cash</div><div class="num">${n}</div><div class="kick">${kicker}</div><div class="line"></div><h1>${title}</h1><p>${text}</p></div></body></html>`);await shot(n)};
+// La première image est déjà une interface : aucun écran noir ni attente initiale.
+await login('Administrateur');await shot('01-dashboard');
+await card('02-probleme','Le problème concret','Des invendus encore consommables sont perdus chaque jour.','Waste2Cash anticipe les surplus et les écoule avant expiration, au lieu de les laisser devenir des pertes économiques et environnementales.','#d06a34');
+await login('Administrateur');await page.getByRole('button',{name:/Stock & Matching/i}).click();await shot('03-matching');
+await card('04-clients','Nos clients cibles','Trois acteurs, une seule chaîne de valeur.','Supermarchés et centres commerciaux fournissent les lots ; grossistes, revendeurs et plateformes les achètent ; Waste2Cash orchestre le réseau.','#2e7d32');
+await login('Fournisseur');await shot('05-fournisseur');
+await card('06-ia','La valeur unique de l’IA','Prédire, prioriser, tarifer et router.','L’IA estime le volume futur, l’urgence, le prix optimal et le meilleur débouché pour maximiser l’écoulement de chaque lot.','#1f5fbf');
+await login('Espace client');await shot('07-marketplace');
+await card('08-business','Notre business model','Une commission sur chaque transaction réussie.','Waste2Cash facture le service de mise en relation et de valorisation, avec à terme des abonnements data pour les enseignes partenaires.','#2e7d32');
+await login('Administrateur');await page.getByRole('button',{name:/Marketplace IA/i}).click();await shot('09-pilotage');
+await card('10-avantage','Pourquoi Waste2Cash ?','Une solution locale, intégrée et mesurable.','Contrairement aux annonces classiques, Waste2Cash relie prévision, prix dynamique, matching, logistique et impact dans un même outil ivoirien.','#1f5fbf');
+await login('Administrateur');await page.getByRole('button',{name:/Partenaires/i}).click();await shot('11-partenaires');
+await page.getByRole('button',{name:/Impact/i}).click();await shot('12-impact');
+await browser.close();console.log('12 scènes jury capturées');
