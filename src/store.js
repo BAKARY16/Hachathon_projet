@@ -8,8 +8,8 @@ export const SESSION_KEY = 'w2c-session-v1';
 // Comptes de démonstration (champ role : admin | fournisseur | client)
 export const accounts = [
     { email: 'admin@waste2cash.ci', password: 'admin123', role: 'admin', name: 'Amadou Koné', initials: 'AK', label: 'Administrateur' },
-    { email: 'fournisseur@socofrais.ci', password: 'socofrais123', role: 'fournisseur', name: 'Équipe Socofrais', initials: 'SO', label: 'Fournisseur · Socofrais' },
-    { email: 'client@marche.ci', password: 'client123', role: 'client', name: 'Awa Diabaté', initials: 'AD', label: 'Client marketplace' }
+    { email: 'fournisseur@socofrais.ci', password: 'socofrais123', role: 'fournisseur', name: 'Équipe Socofrais', initials: 'SO', label: 'Fournisseur' },
+    { email: 'client@marche.ci', password: 'client123', role: 'client', name: 'Awa Diabaté', initials: 'AD', label: 'Espace client' }
 ];
 
 export const roleRoute = { admin: '#/admin', fournisseur: '#/fournisseur', client: '#/marketplace' };

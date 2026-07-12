@@ -21,9 +21,11 @@ Sur la page de connexion, cliquer sur un compte de démonstration pré-remplit l
 
 ## Scénario de démonstration conseillé (2 minutes)
 
-1. **Client** (`client@marche.ci`) : parcourir le catalogue (chaque produit a sa photo réelle, son état, sa prédiction IA individuelle calculée sur l'historique de sa propre sous-catégorie), ajouter 1–2 lots au panier, **valider la commande**, se déconnecter.
-2. **Admin** (`admin@waste2cash.ci`) : ouvrir **Marketplace IA** → la commande du client est dans la file « en attente », la **valider** ; observer la **carte Leaflet** (fournisseurs bleus, clients verts, distances optimales) ; se déconnecter.
-3. **Fournisseur** (`fournisseur@socofrais.ci`) : déposer un invendu via le formulaire ou **importer un CSV** (colonnes reconnues automatiquement : produit, catégorie, quantité, date, commune — doublons et lignes incomplètes rejetés).
+1. **Fournisseur** (`fournisseur@socofrais.ci`) : déclarer un invendu via le formulaire **avec une photo** (compressée et enregistrée dans la base locale, affichée avec la déclaration) ou **importer un CSV** (colonnes reconnues automatiquement — doublons et lignes incomplètes rejetés). Le bouton **« Modifier »** d'une déclaration recharge le formulaire pour **mettre à jour le produit et sa photo** (remplacer ou retirer) — si le produit est déjà en vente, la fiche marketplace est mise à jour instantanément. Se déconnecter.
+2. **Admin** (`admin@waste2cash.ci`) : dans **Stock & Matching**, la déclaration apparaît avec sa vignette → **« Valider le routage »** la publie automatiquement sur la marketplace. Dans **Marketplace IA** : valider les commandes clients, observer la **carte Leaflet** (fournisseurs bleus, clients verts, distances optimales). Se déconnecter.
+3. **Client** (`client@marche.ci`) : le produit déclaré est en vente avec sa photo et le badge « Déclaré · validé ». **Cliquer sur un produit** ouvre sa fiche détaillée (état, quantité, expiration, prix initial, décote et prix IA — sans localisation ni barre de probabilité). Ajouter au panier et **valider la commande**.
+
+Les images par défaut des produits déclarés (par catégorie) sont dans `public/assets/produits-declares/` ; les photos téléversées sont persistées dans la base locale avec la déclaration (voir le README de ce dossier).
 
 Les données persistent après rechargement et entre les sessions (même navigateur). Pour **réinitialiser la démo** : console navigateur → `localStorage.clear()` puis recharger.
 
