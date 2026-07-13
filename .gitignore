@@ -18,3 +18,8 @@ pnpm-debug.log*
 
 # document word
 *.docx
+
+#document powerpoint
+*.pptx
+
+*.mjs
